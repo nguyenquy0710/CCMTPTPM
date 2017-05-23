@@ -1,4 +1,6 @@
 ﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<%@ Import Namespace="FaceShop.Models" %>
+<%@ Import Namespace="System.Linq" %>
 
 <!DOCTYPE html>
 
@@ -276,103 +278,27 @@
                         <div class="content-box">
                             <!-- The content-box -->
                             <ul class="catalog-main">
-
+                                <%List<Category> lstCategory = (List<Category>)ViewBag.lstCategory; %>
+                                <% foreach (Category cat in lstCategory){%>
                                 <li>
-                                    <span><a href="#" title="Tivi">Tivi</a></span>
+                                    <% if(cat.ChildCat == 0) { %>
+                                    <span><a href="#" title='<%= cat.Name %>'>
+                                        <%= cat.Name %>
+                                          </a></span>
                                     <!-- lay danh sach danh muc con -->
                                     <ul class="catalog-sub">
-
+                                        <% foreach(Category subCat in lstCategory) { %>
+                                            <%if(subCat.ChildCat == cat.Id) { %>
                                         <li>
-                                            <a href="danh-muc-Toshiba/18.html" title=" Acer">Toshiba
+                                            <a href="Category/<%= subCat.Id %>" title='<%= subCat.Name %>'>
+                                                <%= subCat.Name %>
                                             </a>
                                         </li>
-
-                                        <li>
-                                            <a href="danh-muc-Samsung/17.html" title=" Acer">Samsung
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="danh-muc-Panasonic/16.html" title=" Acer">Panasonic
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="danh-muc-LG/15.html" title=" Acer">LG
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="danh-muc-JVC/14.html" title=" Acer">JVC
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="danh-muc-AKAI/13.html" title=" Acer">AKAI
-                                            </a>
-                                        </li>
-
+                                        <% } } %>
                                     </ul>
+                                    <% } %>
                                 </li>
-                                <li>
-                                    <span><a href="#" title="Điện thoại">Điện thoại</a></span>
-                                    <!-- lay danh sach danh muc con -->
-                                    <ul class="catalog-sub">
-
-                                        <li>
-                                            <a href="danh-muc-HTC/12.html" title=" Acer">HTC
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="danh-muc-BlackBerry/11.html" title=" Acer">BlackBerry
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="danh-muc-Asus/10.html" title=" Acer">Asus
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="danh-muc-Apple/9.html" title=" Acer">Apple
-                                            </a>
-                                        </li>
-
-                                    </ul>
-                                </li>
-                                <li>
-                                    <span><a href="#" title="Laptop">Laptop</a></span>
-                                    <!-- lay danh sach danh muc con -->
-                                    <ul class="catalog-sub">
-
-                                        <li>
-                                            <a href="danh-muc-HP/8.html" title=" Acer">HP
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="danh-muc-Dell/7.html" title=" Acer">Dell
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="danh-muc-Asus/6.html" title=" Acer">Asus
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="danh-muc--Apple/5.html" title=" Acer">Apple
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="danh-muc--Acer/4.html" title=" Acer">Acer
-                                            </a>
-                                        </li>
-
-                                    </ul>
-                                </li>
+                                <% } %>
                             </ul>
                         </div>
                         <!-- End content-box -->
@@ -463,7 +389,7 @@
                             <h2>Quảng cáo </h2>
                         </div>
                         <div class="content-box">
-                            <a href="">
+                            <a href=".">
                                 <img src="../../Public/site/images/ads.png">
                             </a>
                         </div>

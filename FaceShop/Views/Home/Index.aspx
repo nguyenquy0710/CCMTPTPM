@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/FontEnd.Master" Inherits="System.Web.Mvc.ViewPage<dynamic>" %>
 
+<%@ Import Namespace="FaceShop.Models" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="cphMainContent" runat="server">
 
     <section class="featured">
@@ -71,98 +73,32 @@
         </div>
         <div class="box-content-center product">
             <!-- The box-content-center -->
+            <% foreach (Product p in ViewBag.lstProduct)
+               { %>
             <div class='product_item'>
                 <h3>
-                    <a href="" title="Sản phẩm">Tivi LG 520
+                    <a href="" title="Sản phẩm">
+                        <%= p.Name %>
                     </a>
                 </h3>
                 <div class='product_img'>
                     <a href="san-pham-Tivi-LG-520/9.html" title="Sản phẩm">
-                        <img src="../../Public/upload/product/product13.jpg" alt='' />
+                        <img src="../../Public/upload/product/<%= p.Image %>" alt='' />
                     </a>
                 </div>
                 <p class='price'>
-                    5,400,000 đ
+                    <%= p.Price %> đ
                 </p>
                 <center>
                 <div class='raty' style='margin:10px 0px' id='9' data-score='4'></div>
             </center>
                 <div class='action'>
-                    <p style='float: left; margin-left: 10px'>Lượt xem: <b>19</b></p>
+                    <p style='float: left; margin-left: 10px'>Lượt xem: <b><%= p.View %></b></p>
                     <a class='button' href="them-vao-gio-9.html" title='Mua ngay'>Mua ngay</a>
                     <div class='clear'></div>
                 </div>
             </div>
-            <div class='product_item'>
-                <h3>
-                    <a href="" title="Sản phẩm">Tivi JVC 500
-                    </a>
-                </h3>
-                <div class='product_img'>
-                    <a href="san-pham-Tivi-JVC-500/8.html" title="Sản phẩm">
-                        <img src="../../Public/upload/product/product7.jpg" alt='' />
-                    </a>
-                </div>
-                <p class='price'>
-                    9,500,000 đ
-                <span class='price_old'>10,000,000 đ</span>
-                </p>
-                <center>
-                <div class='raty' style='margin:10px 0px' id='8' data-score='3.4'></div>
-            </center>
-                <div class='action'>
-                    <p style='float: left; margin-left: 10px'>Lượt xem: <b>112</b></p>
-                    <a class='button' href="them-vao-gio-8.html" title='Mua ngay'>Mua ngay</a>
-                    <div class='clear'></div>
-                </div>
-            </div>
-            <div class='product_item'>
-                <h3>
-                    <a href="" title="Sản phẩm">Tivi Toshiba
-                    </a>
-                </h3>
-                <div class='product_img'>
-                    <a href="san-pham-Tivi-Toshiba/7.html" title="Sản phẩm">
-                        <img src="../../Public/upload/product/product6.jpg" alt='' />
-                    </a>
-                </div>
-                <p class='price'>
-                    5,800,000 đ
-                <span class='price_old'>6,200,000 đ</span>
-                </p>
-                <center>
-                <div class='raty' style='margin:10px 0px' id='7' data-score='3.5'></div>
-            </center>
-                <div class='action'>
-                    <p style='float: left; margin-left: 10px'>Lượt xem: <b>74</b></p>
-                    <a class='button' href="them-vao-gio-7.html" title='Mua ngay'>Mua ngay</a>
-                    <div class='clear'></div>
-                </div>
-            </div>
-            <div class='product_item'>
-                <h3>
-                    <a href="" title="Sản phẩm">Tivi JVC 500
-                    </a>
-                </h3>
-                <div class='product_img'>
-                    <a href="san-pham-Tivi-JVC-500/8.html" title="Sản phẩm">
-                        <img src="../../Public/upload/product/product7.jpg" alt='' />
-                    </a>
-                </div>
-                <p class='price'>
-                    9,500,000 đ
-                <span class='price_old'>10,000,000 đ</span>
-                </p>
-                <center>
-                <div class='raty' style='margin:10px 0px' id='8' data-score='3.4'></div>
-            </center>
-                <div class='action'>
-                    <p style='float: left; margin-left: 10px'>Lượt xem: <b>112</b></p>
-                    <a class='button' href="them-vao-gio-8.html" title='Mua ngay'>Mua ngay</a>
-                    <div class='clear'></div>
-                </div>
-            </div>
-
+            <% } %>
             <div class='clear'></div>
         </div>
         <!-- End box-content-center -->
@@ -176,98 +112,32 @@
         </div>
         <div class="box-content-center product">
             <!-- The box-content-center -->
+            <% foreach (Product p in ViewBag.lstProduct)
+               { %>
             <div class='product_item'>
                 <h3>
-                    <a href="" title="Sản phẩm">Tivi JVC 500
+                    <a href="" title="Sản phẩm">
+                        <%= p.Name %>
                     </a>
                 </h3>
                 <div class='product_img'>
-                    <a href="san-pham-Tivi-JVC-500/8.html" title="Sản phẩm">
-                        <img src="../../Public/upload/product/product7.jpg" alt='' />
+                    <a href="san-pham-Tivi-LG-520/9.html" title="Sản phẩm">
+                        <img src="../../Public/upload/product/<%= p.Image %>" alt='' />
                     </a>
                 </div>
                 <p class='price'>
-                    9,500,000 đ
-                <span class='price_old'>10,000,000 đ</span>
+                    <%= p.Price %> đ
                 </p>
                 <center>
-                <div class='raty' style='margin:10px 0px' id='8' data-score='3.4'></div>
+                <div class='raty' style='margin:10px 0px' id='9' data-score='4'></div>
             </center>
                 <div class='action'>
-                    <p style='float: left; margin-left: 10px'>Lượt xem: <b>112</b></p>
-                    <a class='button' href="them-vao-gio-8.html" title='Mua ngay'>Mua ngay</a>
+                    <p style='float: left; margin-left: 10px'>Lượt xem: <b><%= p.View %></b></p>
+                    <a class='button' href="them-vao-gio-9.html" title='Mua ngay'>Mua ngay</a>
                     <div class='clear'></div>
                 </div>
             </div>
-            <div class='product_item'>
-                <h3>
-                    <a href="" title="Sản phẩm">Tivi Toshiba
-                    </a>
-                </h3>
-                <div class='product_img'>
-                    <a href="san-pham-Tivi-Toshiba/7.html" title="Sản phẩm">
-                        <img src="../../Public/upload/product/product6.jpg" alt='' />
-                    </a>
-                </div>
-                <p class='price'>
-                    5,800,000 đ
-                <span class='price_old'>6,200,000 đ</span>
-                </p>
-                <center>
-                <div class='raty' style='margin:10px 0px' id='7' data-score='3.5'></div>
-            </center>
-                <div class='action'>
-                    <p style='float: left; margin-left: 10px'>Lượt xem: <b>74</b></p>
-                    <a class='button' href="them-vao-gio-7.html" title='Mua ngay'>Mua ngay</a>
-                    <div class='clear'></div>
-                </div>
-            </div>
-            <div class='product_item'>
-                <h3>
-                    <a href="" title="Sản phẩm">Tivi LG 4000
-                    </a>
-                </h3>
-                <div class='product_img'>
-                    <a href="san-pham-Tivi-LG-4000/2.html" title="Sản phẩm">
-                        <img src="../../Public/upload/product/product2.jpg" alt='' />
-                    </a>
-                </div>
-                <p class='price'>
-                    3,800,000 đ
-                <span class='price_old'>4,000,000 đ</span>
-                </p>
-                <center>
-                <div class='raty' style='margin:10px 0px' id='2' data-score='4'></div>
-            </center>
-                <div class='action'>
-                    <p style='float: left; margin-left: 10px'>Lượt xem: <b>4</b></p>
-                    <a class='button' href="them-vao-gio-2.html" title='Mua ngay'>Mua ngay</a>
-                    <div class='clear'></div>
-                </div>
-            </div>
-            <div class='product_item'>
-                <h3>
-                    <a href="" title="Sản phẩm">Tivi Toshiba
-                    </a>
-                </h3>
-                <div class='product_img'>
-                    <a href="san-pham-Tivi-Toshiba/7.html" title="Sản phẩm">
-                        <img src="../../Public/upload/product/product6.jpg" alt='' />
-                    </a>
-                </div>
-                <p class='price'>
-                    5,800,000 đ
-                <span class='price_old'>6,200,000 đ</span>
-                </p>
-                <center>
-                <div class='raty' style='margin:10px 0px' id='7' data-score='3.5'></div>
-            </center>
-                <div class='action'>
-                    <p style='float: left; margin-left: 10px'>Lượt xem: <b>74</b></p>
-                    <a class='button' href="them-vao-gio-7.html" title='Mua ngay'>Mua ngay</a>
-                    <div class='clear'></div>
-                </div>
-            </div>
+            <% } %>
             <div class='clear'></div>
         </div>
         <!-- End box-content-center -->
@@ -281,97 +151,32 @@
         </div>
         <div class="box-content-center product">
             <!-- The box-content-center -->
+            <% foreach (Product p in ViewBag.lstProduct)
+               { %>
             <div class='product_item'>
                 <h3>
-                    <a href="" title="Sản phẩm">Tivi JVC 500
-                    </a>
-                </h3>
-                <div class='product_img'>
-                    <a href="san-pham-Tivi-JVC-500/8.html" title="Sản phẩm">
-                        <img src="../../Public/upload/product/product7.jpg" alt='' />
-                    </a>
-                </div>
-                <p class='price'>
-                    9,500,000 đ
-                <span class='price_old'>10,000,000 đ</span>
-                </p>
-                <center>
-                <div class='raty' style='margin:10px 0px' id='8' data-score='3.4'></div>
-            </center>
-                <div class='action'>
-                    <p style='float: left; margin-left: 10px'>Lượt xem: <b>112</b></p>
-                    <a class='button' href="them-vao-gio-8.html" title='Mua ngay'>Mua ngay</a>
-                    <div class='clear'></div>
-                </div>
-            </div>
-            <div class='product_item'>
-                <h3>
-                    <a href="" title="Sản phẩm">Tivi Toshiba
-                    </a>
-                </h3>
-                <div class='product_img'>
-                    <a href="san-pham-Tivi-Toshiba/7.html" title="Sản phẩm">
-                        <img src="../../Public/upload/product/product6.jpg" alt='' />
-                    </a>
-                </div>
-                <p class='price'>
-                    5,800,000 đ
-                <span class='price_old'>6,200,000 đ</span>
-                </p>
-                <center>
-                <div class='raty' style='margin:10px 0px' id='7' data-score='3.5'></div>
-            </center>
-                <div class='action'>
-                    <p style='float: left; margin-left: 10px'>Lượt xem: <b>74</b></p>
-                    <a class='button' href="them-vao-gio-7.html" title='Mua ngay'>Mua ngay</a>
-                    <div class='clear'></div>
-                </div>
-            </div>
-            <div class='product_item'>
-                <h3>
-                    <a href="" title="Sản phẩm">Tivi LG 520
+                    <a href="" title="Sản phẩm">
+                        <%= p.Name %>
                     </a>
                 </h3>
                 <div class='product_img'>
                     <a href="san-pham-Tivi-LG-520/9.html" title="Sản phẩm">
-                        <img src="../../Public/upload/product/product13.jpg" alt='' />
+                        <img src="../../Public/upload/product/<%= p.Image %>" alt='' />
                     </a>
                 </div>
                 <p class='price'>
-                    5,400,000 đ
+                    <%= p.Price %> đ
                 </p>
                 <center>
                 <div class='raty' style='margin:10px 0px' id='9' data-score='4'></div>
             </center>
                 <div class='action'>
-                    <p style='float: left; margin-left: 10px'>Lượt xem: <b>19</b></p>
+                    <p style='float: left; margin-left: 10px'>Lượt xem: <b><%= p.View %></b></p>
                     <a class='button' href="them-vao-gio-9.html" title='Mua ngay'>Mua ngay</a>
                     <div class='clear'></div>
                 </div>
             </div>
-            <div class='product_item'>
-                <h3>
-                    <a href="" title="Sản phẩm">Tivi Toshiba
-                    </a>
-                </h3>
-                <div class='product_img'>
-                    <a href="san-pham-Tivi-Toshiba/7.html" title="Sản phẩm">
-                        <img src="../../Public/upload/product/product6.jpg" alt='' />
-                    </a>
-                </div>
-                <p class='price'>
-                    5,800,000 đ
-                <span class='price_old'>6,200,000 đ</span>
-                </p>
-                <center>
-                <div class='raty' style='margin:10px 0px' id='7' data-score='3.5'></div>
-            </center>
-                <div class='action'>
-                    <p style='float: left; margin-left: 10px'>Lượt xem: <b>74</b></p>
-                    <a class='button' href="them-vao-gio-7.html" title='Mua ngay'>Mua ngay</a>
-                    <div class='clear'></div>
-                </div>
-            </div>
+            <% } %>
             <div class='clear'></div>
         </div>
         <!-- End box-content-center -->

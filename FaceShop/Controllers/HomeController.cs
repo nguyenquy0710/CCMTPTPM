@@ -13,6 +13,7 @@ namespace FaceShop.Controllers
         {
             ViewBag.Title = "FaceShop";
             ViewBag.lstCategory = Categories.GetList;
+            ViewBag.lstProduct = Products.GetList;
             return View();
         }
     }
