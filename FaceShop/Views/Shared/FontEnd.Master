@@ -6,8 +6,7 @@
 <head runat="server">
     <meta charset="utf-8" />
     <title>
-        <asp:ContentPlaceHolder runat="server" ID="cphTitle"></asp:ContentPlaceHolder>
-    <asp:Literal runat="server" ID="ltlTitle"> - qpCoders.com</asp:Literal>     
+        <%= ViewBag.Title %> - qpCoders.com
     </title>
     <link href="../../Public/site/images/favicon.png" rel="shortcut icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width" />
@@ -146,10 +145,10 @@
                 <div id="menu">
                     <!-- the menu -->
                     <ul class="menu_top">
-                        <li class="active index-li"><%Html.ActionLink("Trang Chủ", "Index", "Home"); %></li>
+                        <li class="active index-li"><%= Html.ActionLink("Trang Chủ", "Index", "Home") %></li>
                         <li class=""><a href="info/view/1.html">Giới thiệu</a></li>
                         <li class=""><a href="info/view/2.html">Hướng dẫn</a></li>
-                        <li class=""><%Html.ActionLink("Sản Phẩm", "Index", "Product"); %></li>
+                        <li class=""><%= Html.ActionLink("Sản Phẩm", "Index", "Product") %></li>
                         <li class=""><a href="tin-tuc.html">Tin tức</a></li>
                         <li class=""><a href="video.html">Video</a></li>
                         <li class=""><a href="lien-he.html">Liên hệ</a></li>

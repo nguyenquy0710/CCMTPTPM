@@ -13,6 +13,7 @@ namespace FaceShop.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.Title = "San Pham";
             return View();
         }
 
