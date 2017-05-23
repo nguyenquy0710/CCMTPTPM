@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using FaceShop.Models;
 
 namespace FaceShop.Controllers
 {
@@ -10,7 +11,8 @@ namespace FaceShop.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Dong nay duoc gui tu controller sang";
+            ViewBag.Title = "FaceShop";
+            ViewBag.lstCategory = Categories.GetList;
             return View();
         }
     }
