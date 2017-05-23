@@ -189,6 +189,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -329,8 +330,6 @@
       <LastGenOutput>DB.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
-    <None Include="Properties\PublishProfiles\faceshop - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\faceshop - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Public\admin\catalog.html" />
     <Content Include="Public\admin\comment.html" />
@@ -2149,8 +2148,8 @@
     <Content Include="Public\site\royalslider\skins\minimal-white\rs-minimal-white.css" />
     <Content Include="Public\site\royalslider\skins\minimal-white\rs-minimal-white.png" />
     <Content Include="Public\site\royalslider\skins\preloaders\preloader-white.gif" />
-    <Content Include="Public\site\tivi\jwplayer.js" />
-    <Content Include="Public\site\tivi\player.swf" />
+    <Content Include="Public\site\tivi\jwplayer1.js" />
+    <Content Include="Public\site\tivi\player1.swf" />
     <Content Include="Public\upload\news\1-7d48c.jpg" />
     <Content Include="Public\upload\news\1-af558.jpg" />
     <Content Include="Public\upload\news\455-549e4.jpg" />
@@ -2230,9 +2229,9 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
+    <Content Include="Views\Product\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
